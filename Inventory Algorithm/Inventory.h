@@ -15,7 +15,7 @@ enum eItems
 
 struct ItemSlotPos
 {
-	int32_t row = -1, col = -1;
+	uint32_t row = UINT32_MAX, col = UINT32_MAX;
 	ItemSlotPos()												{}
 	ItemSlotPos(int32_t row, int32_t col) : row(row), col(col)	{}
 
@@ -49,7 +49,7 @@ struct ItemSlot
 
 struct Inventory
 {
-	int32_t cols = 0, rows = 0;
+	uint32_t cols = 0, rows = 0;
 	ItemSlot*** data = nullptr;
 	std::vector<ItemSlot*> items;
 

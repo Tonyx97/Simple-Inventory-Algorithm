@@ -24,9 +24,9 @@ Inventory::~Inventory()
 {
 	for (auto&& item : items)
 		delete item;
-	for (int32_t i = 0; i < rows; ++i)
+	for (uint32_t i = 0; i < rows; ++i)
 	{
-		for (int32_t j = 0; j < cols; ++j)
+		for (uint32_t j = 0; j < cols; ++j)
 			delete data[i][j];
 		delete[] data[i];
 	}
